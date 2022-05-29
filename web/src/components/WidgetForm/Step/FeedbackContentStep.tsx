@@ -31,6 +31,9 @@ export function FeedbackContentStep({
 
     setIsSendingFeedback(true);
 
+    console.log(import.meta.env.VITE_API_URL);
+    console.log(api.getUri());
+
     await api.post('/feedbacks', {
       type: feedbackType,
       screenshot,
